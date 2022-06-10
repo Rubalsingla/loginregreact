@@ -33,22 +33,28 @@ const Register=()=>{
       }
     return <>
         
-            <div className="d-flex justify-content-center">
+            <div className="row">
+              <div className="col-md-6">
                 <div className="imgdata"><img src={Shop} alt="" /></div>
-                <form onSubmit={save}>
+              </div>
+              <div className="col-md-6 align-self-center">
+                <form className="login-form" onSubmit={save}>
 
-                <div className="d-flex flex-column flex-grow-1 justify-content-center">
+                <div>
                     <label><b>Username</b></label>
                     <input type="text" placeholder="Enter Username" name="uname" onChange={(e) => setName(e.target.value)} required />
                     <label><b>Email</b></label>
                     <input type="email" placeholder="Enter Email" name="email" onChange={(e) => setEmail(e.target.value)} required />
                     <label><b>Password</b></label>
                     <input type="password" placeholder="Enter Password" name="password" onChange={(e) => setPassword(e.target.value)} required />
+                    <label><b>Confirm Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="password" onChange={(e) => setPassword(e.target.value)} required />
                     <button className="btn btn-primary mt-1" type="submit">Register</button>
                 </div>
 
 
                 </form>
+                </div>
                     
               
                 </div>
